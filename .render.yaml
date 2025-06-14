@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: surakshavax-api
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: CI_ENVIRONMENT
+        value: production
+      - key: app.baseURL
+        value: https://surakshavax-api.onrender.com
+      # Add DB vars if needed here
